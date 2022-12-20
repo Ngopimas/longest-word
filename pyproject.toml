@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "longest-word"
+version = "0.1.0"
+description = ""
+authors = ["Romain Coupey <schaft115@hotmail.com>"]
+readme = "README.md"
+packages = [{include = "longest_word"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytest = "^7.2.0"
+pylint = "^2.15.9"
+
+
+[tool.poetry.group.dev.dependencies]
+black = {version = "^23.1a1", allow-prereleases = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
