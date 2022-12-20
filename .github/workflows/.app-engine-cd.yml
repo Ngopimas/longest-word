@@ -1,7 +1,10 @@
 name: basic CD
 on:
-  push:
+  workflow_run:
+    workflows: ["basic CI"]
     branches: [ master, main ]
+    types: 
+      - completed
 jobs:
   deploy-to-app-engine:
     runs-on: ubuntu-latest
